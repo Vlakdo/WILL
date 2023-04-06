@@ -13,7 +13,30 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
+  var auxArray = ("" + num).split("");
 
+   var counter = 0;
+  var isCapicua = true;
+
+    while(counter <= (auxArray.length-1)-counter)
+    {
+        if(auxArray[counter] != auxArray[(auxArray.length-1)-counter])
+        {
+            isCapicua = false;
+            break;
+        }
+
+        counter++;
+    }
+
+    if(isCapicua)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 // No modifiques nada debajo de esta linea //
